@@ -1,0 +1,96 @@
+{% extends './layout.html' %}
+
+{% block title%} Meta {%endblock%}
+{% block css%}<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">{%endblock%}
+{% block js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="entorno">
+        <div id="C42" class="fin"></div>
+        <div id="C41" class="normal"></div>
+        <div id="C40" class="peligro"></div>
+        <div id="C39" class="normal"></div>
+        <div id="C38" class="normal"></div>
+        <div id="C37" class="avance"></div>
+        <div id="C36" class="normal"></div>
+        <div id="C35" class="volver"></div>
+        <div id="C34" class="normal"></div>
+        <div id="C33" class="pregunta"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div id="C32" class="normal"></div>
+        <div id="C22" class="pregunta"></div>
+        <div id="C23" class="normal"></div>
+        <div id="C24" class="normal"></div>
+        <div id="C25" class="avance"></div>
+        <div id="C26" class="normal"></div>
+        <div id="C27" class="normal"></div>
+        <div id="C28" class="pregunta"></div>
+        <div id="C29" class="volver"></div>
+        <div id="C30" class="normal"></div>
+        <div id="C31" class="bloque"></div>
+        <div id="C21" class="normal"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div id="C20" class="avance"></div>
+        <div id="C19" class="normal"></div>
+        <div id="C18" class="pregunta"></div>
+        <div id="C17" class="normal"></div>
+        <div id="C16" class="volver"></div>
+        <div id="C15" class="normal"></div>
+        <div id="C14" class="normal"></div>
+        <div id="C13" class="pregunta"></div>
+        <div id="C12" class="normal"></div>
+        <div id="C11" class="bloque"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div class="vacio"></div>
+        <div id="C10" class="normal"></div>
+        <div id="C0" class="inicio"></div>
+        <div id="C1" class="normal"></div>
+        <div id="C2" class="normal"></div>
+        <div id="C3" class="pregunta"></div>
+        <div id="C4" class="normal"></div>
+        <div id="C5" class="volver"></div>
+        <div id="C6" class="normal"></div>
+        <div id="C7" class="avance"></div>
+        <div id="C8" class="normal"></div>
+        <div id="C9" class="pregunta"></div>
+    </div>
+    <button id="btn"></button>
+    <div id="pregunta">
+        <div class="pregunta-texto"><p class="texto-preguntaprincipal">El coseno de 0 es</p></div>
+        <div class="respuesta-texto"> 
+            <input type="radio" name="respuesta" class="respuesta1" value="res1"><p class="texto-respuesta1">0</p>
+            <input type="radio" name="respuesta" class="respuesta2" value="res2"><p class="texto-respuesta2">1</p>
+            <input type="radio" name="respuesta" class="respuesta3" value="res3"><p class="texto-respuesta3">Syntax Error</p>
+        </div>
+    </div>
+</div>
+
+{% block script %}    
+    <script src="{{ url_for('static',filename='script.js') }}"></script>
+{% endblock %}
+{% endblock %}
