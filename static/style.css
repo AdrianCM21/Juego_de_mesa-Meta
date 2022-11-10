@@ -8,7 +8,7 @@
 }
 #btn{
     height: 20vh;
-    width: 20vh; 
+    width: 9vw; 
     background-image:  url('/static/img/play2.png');
 }
 .entorno{
@@ -28,7 +28,7 @@
     right: 19vw;
     background: #fff;
     border: 2px solid #247fbb;
-    display: flex;
+    display: none;
     flex-direction: column;
     box-shadow: 0 14px 28px #0f0f0f, 
     0 10px 10px rgba(0,0,0,0.22);
@@ -152,4 +152,17 @@ input{
     height: 1.5rem;
     width: 1.5rem; 
     margin-right: .8rem;
+}
+.player1{
+    height: 8vh;
+    width: 4vw;
+    position: absolute;
+    top: 81vh;
+    right: 49vw;
+    background: #0f0f0f;
+    box-shadow: 0 14px 28px #0f0f0f, 
+    0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 30rem;
+    border: 3px solid ghostwhite;
+
 }
