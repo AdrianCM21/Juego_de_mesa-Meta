@@ -3,21 +3,24 @@
 {% block title%} Meta {%endblock%}
 {% block css%}<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">{%endblock%}
 {% block js %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+        integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script> -->
 {% endblock %}
 {% block body %}
 <div class="container">
     <div class="entorno">
         <div id="C42" class="fin"></div>
-        <div id="C41" class="normal"></div>
-        <div id="C40" class="peligro"></div>
-        <div id="C39" class="normal"></div>
-        <div id="C38" class="normal"></div>
+        <div id="C41" class="peligro" onclick="juego(41)"></div>
+        <div id="C40" class="peligro" onclick="juego(40)"></div>
+        <div id="C39" class="normal" onclick="juego(39)"></div>
+        <div id="C38" class="normal" onclick="juego(38)"></div>
         <div id="C37" class="avance"></div>
-        <div id="C36" class="normal"></div>
-        <div id="C35" class="volver"></div>
-        <div id="C34" class="normal"></div>
-        <div id="C33" class="pregunta"></div>
+        <div id="C36" class="normal" onclick="juego(36)"></div>
+        <div id="C35" class="volver" onclick="juego(35)"></div>
+        <div id="C34" class="normal" onclick="juego(34)"></div>
+        <div id="C33" class="pregunta" onclick="juego(33)"></div>
         <div class="vacio"></div>
         <div class="vacio"></div>
         <div class="vacio"></div>
@@ -27,18 +30,18 @@
         <div class="vacio"></div>
         <div class="vacio"></div>
         <div class="vacio"></div>
-        <div id="C32" class="normal"></div>
-        <div id="C22" class="pregunta"></div>
-        <div id="C23" class="normal"></div>
-        <div id="C24" class="normal"></div>
+        <div id="C32" class="normal" onclick="juego(32)"></div>
+        <div id="C22" class="pregunta" onclick="juego(22)"></div>
+        <div id="C23" class="normal" onclick="juego(23)"></div>
+        <div id="C24" class="normal" onclick="juego(24)"></div>
         <div id="C25" class="avance"></div>
-        <div id="C26" class="normal"></div>
-        <div id="C27" class="normal"></div>
-        <div id="C28" class="pregunta"></div>
-        <div id="C29" class="volver"></div>
-        <div id="C30" class="normal"></div>
+        <div id="C26" class="normal" onclick="juego(26)"></div>
+        <div id="C27" class="normal" onclick="juego(27)"></div>
+        <div id="C28" class="pregunta" onclick="juego(28)"></div>
+        <div id="C29" class="volver" onclick="juego(29)"></div>
+        <div id="C30" class="normal" onclick="juego(30)"></div>
         <div id="C31" class="bloque"></div>
-        <div id="C21" class="normal"></div>
+        <div id="C21" class="normal" onclick="juego(21)"></div>
         <div class="vacio"></div>
         <div class="vacio"></div>
         <div class="vacio"></div>
@@ -49,14 +52,14 @@
         <div class="vacio"></div>
         <div class="vacio"></div>
         <div id="C20" class="avance"></div>
-        <div id="C19" class="normal"></div>
-        <div id="C18" class="pregunta"></div>
-        <div id="C17" class="normal"></div>
-        <div id="C16" class="volver"></div>
-        <div id="C15" class="normal"></div>
-        <div id="C14" class="normal"></div>
-        <div id="C13" class="pregunta"></div>
-        <div id="C12" class="normal"></div>
+        <div id="C19" class="normal" onclick="juego(19)"></div>
+        <div id="C18" class="pregunta" onclick="juego(18)"></div>
+        <div id="C17" class="normal" onclick="juego(17)"></div>
+        <div id="C16" class="volver"onclick="juego(16)"></div>
+        <div id="C15" class="normal" onclick="juego(15)"></div>
+        <div id="C14" class="normal" onclick="juego(14)"></div>
+        <div id="C13" class="pregunta" onclick="juego(13)"></div>
+        <div id="C12" class="normal"  onclick="juego(12)"></div>
         <div id="C11" class="bloque"></div>
         <div class="vacio"></div>
         <div class="vacio"></div>
@@ -67,30 +70,31 @@
         <div class="vacio"></div>
         <div class="vacio"></div>
         <div class="vacio"></div>
-        <div id="C10" class="normal"></div>
+        <div id="C10" class="normal"  onclick="juego(10)"></div>
         <div id="C0" class="inicio"></div>
-        <div id="C1" class="normal"></div> 
-        <div id="C2" class="normal"></div>
-        <div id="C3" class="pregunta"></div>
-        <div id="C4" class="normal"></div>
-        <div id="C5" class="volver"></div>
-        <div id="C6" class="normal"></div>
+        <div id="C1" class="normal" onclick="juego(1)"></div> 
+        <div id="C2" class="normal" onclick="juego(2)"></div>
+        <div id="C3" class="pregunta"onclick="juego(3)"></div>
+        <div id="C4" class="normal" onclick="juego(4)"></div>
+        <div id="C5" class="volver" onclick="juego(5)"></div>
+        <div id="C6" class="normal" onclick="juego(6)"></div>
         <div id="C7" class="avance"></div>
-        <div id="C8" class="normal"></div>
-        <div id="C9" class="pregunta"></div>
+        <div id="C8" class="normal" onclick="juego(8)"></div>
+        <div id="C9" class="pregunta" onclick="juego(9)"></div>
     </div>
     <button id="btn"></button>
     <div id="pregunta">
-        <div class="pregunta-texto"><p class="texto-preguntaprincipal">El coseno de 0 es</p></div>
-        <div class="respuesta-texto"> 
-            <div class="container-respuesta"><input type="radio" name="respuesta" class="respuesta1" value="res1"><p class="texto-respuesta1">0</p></div>
-            <div class="container-respuesta"><input type="radio" name="respuesta" class="respuesta2" value="res2"><p class="texto-respuesta2">1</p></div>
-            <div class="container-respuesta"><input type="radio" name="respuesta" class="respuesta3" value="res3"><p class="texto-respuesta3">Syntax Error</p></div>
-        </div>
+        <div class="pregunta-texto"><p id='pregunta-principal' class="texto-preguntaprincipal"></p></div>
+        <form class="respuesta-texto"> 
+            <div class="container-respuesta"><label for="res1"><input type="radio" name="respuesta" id="res1" class="respuesta1" value="res1"><p id="texto-respuesta1"></p></label></div>
+            <div class="container-respuesta"><label for="res2"><input type="radio" name="respuesta" id="res2" class="respuesta2" value="res2"><p id="texto-respuesta2"></p></label></div>
+            <div class="container-respuesta"><label for="res3"><input type="radio" name="respuesta" id="res3" class="respuesta3" value="res3"><p id="texto-respuesta3"></p></label></div>
+            <button type="button" id="btn-respuesta">Enviar</button>
+        </form>
     </div>
-    <div class="player1"></div>
+    <div id="player1"></div>
+    <div id="player2"></div>
 </div>
-
 {% block script %}    
     <script src="{{ url_for('static',filename='script.js') }}"></script>
 {% endblock %}
