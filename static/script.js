@@ -8,8 +8,8 @@ btn.addEventListener('click',()=>{
     btn.style.backgroundImage='url(/static/img/L'+numeroRandom+'.png)';
     // btn.disabled = true;
     casillaPlayer1=casillaPlayer1+numeroRandom;
-    document.getElementById('C'+casillaPlayer1).style.backgroundColor='#14CC67';
-    document.getElementById('C'+casillaAnterior1).style.backgroundColor='#fff';
+    // document.getElementById('C'+casillaPlayer1).style.backgroundColor='#14CC67';
+    // document.getElementById('C'+casillaAnterior1).style.backgroundColor='#fff';
     casillaAnterior1=casillaAnterior1+numeroRandom;
 })
 
