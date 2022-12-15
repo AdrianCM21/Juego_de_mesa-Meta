@@ -13,11 +13,12 @@ btn.addEventListener('click',()=>{
     btn.style.backgroundImage='url(/static/img/L'+numeroRandom+'.png)';
     btn.disabled = true;
     if(turno==1){
-      casillaPlayer1=casillaPlayer1+numeroRandom; document.getElementById('C'+casillaPlayer1).style.backgroundColor='#E8FF1C';document.getElementById('C'+casillaPlayer1).disabled=false;;
+      casillaPlayer1=casillaPlayer1+numeroRandom; document.getElementById('C'+casillaPlayer1).style.backgroundColor='#E8FF1C';document.getElementById('C'+casillaPlayer1).disabled=false;
     }else{ 
-      casillaPlayer2=casillaPlayer2+numeroRandom;document.getElementById('C'+casillaPlayer2).style.backgroundColor='#EF2D56';document.getElementById('C'+casillaPlayer2).disabled=false;}
-    if(casillaPlayer1>41){Over(1)}
-if(casillaPlayer2>41){Over(2)}
+      casillaPlayer2=casillaPlayer2+numeroRandom;document.getElementById('C'+casillaPlayer2).style.backgroundColor='#EF2D56';document.getElementById('C'+casillaPlayer2).disabled=false;
+    }
+    if(casillaPlayer1>41){Over(1);}
+if(casillaPlayer2>41){Over(2);}
 })
 
 juego=(id)=>{
